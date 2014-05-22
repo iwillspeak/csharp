@@ -1,2 +1,3 @@
 command: rake test
 filters: \.cs$
+paths: [ . ]
