@@ -61,11 +61,22 @@ internal class Euler
 
 	public void Compute()
 	{
-		Console.WriteLine("Evenly divisible");
-		long i = 20;
-		while (!isDivisibleTo(i, 20))
-			i+=20;
-		Console.WriteLine(i);
+		Console.WriteLine("sum of squares");
+		long sumOfSquares = 0;
+		long squareOfSums = 0;
+		for (int i = 1; i <= 100; i++)
+		{
+			long square = i * i;
+			sumOfSquares += square;
+		}
+		for (int i = 1; i <= 100; i++)
+		{
+			squareOfSums += i;
+		}
+		squareOfSums *= squareOfSums;
+		Console.WriteLine(sumOfSquares);
+		Console.WriteLine(squareOfSums);
+		Console.WriteLine(squareOfSums - sumOfSquares);
 	}
 }
 
